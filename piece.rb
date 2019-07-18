@@ -9,7 +9,16 @@ class Piece
     @pos = pos
   end
 
+  def inspect
+    puts "#{self.class.name}, #{self.symbol}"
+  end
+
   def moves 
 
   end
+
+  def symbol
+    
+  end
+
 end

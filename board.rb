@@ -72,6 +72,6 @@ class Board
   end
 end 
 
-board = Board.new
-board.move_piece([0,0],[3,3])
-p board.rows
+# board = Board.new
+# board.move_piece([0,0],[3,3])
+# p board.rows

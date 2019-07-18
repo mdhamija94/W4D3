@@ -9,4 +9,12 @@ class Queen < Piece
     hv_dirs.concat(diagonal_dirs)
   end
 
+  def symbol
+    if self.color == :white
+      "♕"
+    else
+      "♛"
+    end
+  end
+
 end

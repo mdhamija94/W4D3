@@ -82,9 +82,12 @@ class Cursor
     when :left, :right, :up, :down
       self.update_pos(MOVES[key])
       return nil
+    when :ctrl_c
+      Process.exit(0)
     end
   end
 
   def update_pos(diff)
+    @cursor_pos = diff
   end
 end

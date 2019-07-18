@@ -10,4 +10,12 @@ class Rook < Piece
     hv_dirs
   end
 
+  def symbol
+    if self.color == :white 
+      "♖"
+    else
+      "♜"
+    end
+  end
+
 end

@@ -9,4 +9,12 @@ class Bishop < Piece
     diagonal_dirs
   end
 
+  def symbol
+    if self.color == :white
+      "♗"
+    else 
+      "♝"
+    end
+  end
+
 end
