@@ -31,12 +31,13 @@ class Display
   end
 
 end
+
 b = Board.new
 c = Cursor.new([0,0], b)
 d = Display.new(c, b)
+
 while true 
   d.render
   c.get_input
   system("clear")
-
 end

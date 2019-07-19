@@ -1,16 +1,15 @@
-require_relative "piece.rb"
+require_relative "piece"
+require_relative "steppable"
+
 class Knight < Piece
+  include Steppable
 
   def move_diffs
     [[2, 1], [2, -1], [-2, 1], [-2, -1], [1, 2], [1, -2], [-1, 2], [-1, -2]]
   end
 
   def symbol
-    if self.color == :white
-      "♘"
-    else
-      "♞"
-    end
+    ' ♞ '.colorize(color)
   end
   
 end

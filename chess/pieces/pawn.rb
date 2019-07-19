@@ -1,13 +1,8 @@
-require_relative "piece.rb"
+require_relative "piece"
+
 class Pawn < Piece
-
-
   def symbol 
-    if self.color == :white
-      "♙"
-    else
-      "♟"
-    end
+    ' ♟ '.colorize(color)
   end
 
   def move_dirs 

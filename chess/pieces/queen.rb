@@ -1,5 +1,5 @@
-require_relative "piece.rb"
-require_relative "slideable.rb"
+require_relative "piece"
+require_relative "slideable"
 
 class Queen < Piece
   include Slideable
@@ -10,11 +10,7 @@ class Queen < Piece
   end
 
   def symbol
-    if self.color == :white
-      "♕"
-    else
-      "♛"
-    end
+    ' ♛ '.colorize(color)
   end
 
 end

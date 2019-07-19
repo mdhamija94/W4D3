@@ -1,6 +1,17 @@
 module Slideable
-  HV_DIRS = [[1, 0], [-1, 0], [0, 1], [0, -1]]
-  DIAGONAL_DIRS = [[1, 1], [1, -1], [-1, 1],[-1 ,-1]]
+  HV_DIRS = [
+    [1, 0], 
+    [-1, 0], 
+    [0, 1], 
+    [0, -1]
+  ].freeze
+
+  DIAGONAL_DIRS = [
+    [1, 1], 
+    [1, -1], 
+    [-1, 1],
+    [-1 ,-1]
+  ].freeze
 
   def moves 
     results = []

@@ -1,11 +1,5 @@
-require_relative 'piece.rb'
-require_relative 'null_piece.rb'
-require_relative 'rook.rb'
-require_relative 'knight.rb'
-require_relative 'bishop.rb'
-require_relative 'queen.rb'
-require_relative 'king.rb'
-require "byebug"
+require_relative 'pieces'
+
 class Board
   attr_reader :rows
   def initialize
@@ -45,6 +39,16 @@ class Board
             self[[y,x]] = Queen.new(:white, @rows, [y,x])
           end
         end
+      elsif
+        y == 1
+        row.each_with_index do |row_el, x|
+          self[[y,x]] = Pawn.new(:black, @rows, [y,x])
+        end
+      elsif
+        y == 6
+        row.each_with_index do |row_el, x|
+          self[[y,x]] = Pawn.new(:white, @rows, [y,x])
+        end
       end
     end
   end
@@ -69,6 +73,10 @@ class Board
     end
     
     self[end_pos], self[start_pos] = self[start_pos], NullPiece.instance
+  end
+
+  def valid_pos?(pos)
+    pos.all? { |place_on_board| place_on_board.between?(0, 7) }
   end
 end 
 
